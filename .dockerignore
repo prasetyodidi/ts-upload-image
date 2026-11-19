@@ -1,0 +1,8 @@
+node_modules
+.git
+.env
+e2e
+test-results
+playwright-report
+*.pdf
+packages/db/schema.sql

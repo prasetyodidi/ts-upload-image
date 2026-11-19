@@ -1,0 +1,24 @@
+{
+  "name": "ts-upload-image",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "e2e"
+  ],
+  "scripts": {
+    "test": "bun test apps packages",
+    "test:e2e": "bun test e2e",
+    "test:e2e:recovery": "E2E_RECOVERY=1 bun test e2e/recovery.test.ts",
+    "test:browser": "bun run --cwd e2e test:browser",
+    "typecheck": "bunx tsc --noEmit -p apps/api/tsconfig.json && bunx tsc --noEmit -p apps/worker/tsconfig.json",
+    "web:check": "bun run --cwd apps/web check",
+    "web:build": "bun run --cwd apps/web build",
+    "worker:test": "bun test apps/worker"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.9.0"
+  }
+}
