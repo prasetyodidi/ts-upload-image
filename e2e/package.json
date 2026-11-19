@@ -1,0 +1,19 @@
+{
+  "name": "@ts-upload-image/e2e",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bun test",
+    "test:browser": "playwright test --config playwright.config.ts"
+  },
+  "dependencies": {
+    "@ts-upload-image/storage": "workspace:*",
+    "postgres": "^4.1.1",
+    "sharp": "^0.34.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "dotenv": "^18.0.10"
+  }
+}
