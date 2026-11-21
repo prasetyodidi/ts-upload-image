@@ -18,6 +18,7 @@
   --color-on-primary: #ffffff;
 
   --color-brand-pink: #ff4d8b;
+  --color-brand-pink-strong: #d92d68;
   --color-brand-teal: #1a3a3a;
   --color-brand-lavender: #b8a4ed;
   --color-brand-peach: #ffb084;
@@ -74,5 +75,21 @@
   input,
   a {
     font: inherit;
+  }
+
+  button:not(:disabled),
+  a[href],
+  label[for] {
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

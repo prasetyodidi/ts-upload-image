@@ -55,7 +55,7 @@
     phase === "completed"
       ? "bg-canvas text-ink"
       : phase === "failed"
-        ? "bg-brand-coral text-on-primary"
+        ? "bg-brand-coral text-ink"
         : "bg-brand-ochre text-ink",
   );
 
@@ -208,7 +208,7 @@
     <div class="flex items-center gap-2.5">
       <span
         class="grid size-8 place-items-center rounded-[10px] bg-primary text-sm font-semibold text-on-primary"
-        aria-hidden="true">c</span
+        aria-hidden="true">t</span
       >
       <span class="font-display text-lg font-semibold tracking-[-0.04em] text-ink"
         >ts-upload-image</span
@@ -250,14 +250,14 @@
       </div>
 
       <div class="mt-12 grid gap-3 sm:grid-cols-3">
-        <article class="rounded-card bg-brand-pink p-5 text-on-primary">
-          <p class="text-[11px] font-semibold uppercase tracking-[0.16em] opacity-80">
+        <article class="rounded-card bg-brand-pink-strong p-5 text-on-primary">
+          <p class="text-[11px] font-semibold uppercase tracking-[0.16em]">
             01
           </p>
           <h2 class="mt-8 font-display text-xl font-medium tracking-[-0.02em]">
             Upload
           </h2>
-          <p class="mt-2 text-sm leading-relaxed opacity-90">
+          <p class="mt-2 text-sm leading-relaxed">
             Validasi isi file dan simpan input sebelum job dibuat.
           </p>
         </article>
@@ -336,6 +336,8 @@
                 class="size-14 rounded-[10px] object-cover"
                 src={previewUrl}
                 alt="Preview gambar yang dipilih"
+                width="56"
+                height="56"
               />
             {/if}
             <div class="min-w-0">
@@ -359,7 +361,7 @@
         {/if}
 
         <button
-          class="mt-5 inline-flex h-11 w-full items-center justify-center rounded-control bg-primary px-5 text-sm font-semibold text-on-primary transition-colors hover:bg-primary-active disabled:cursor-not-allowed disabled:bg-primary-disabled disabled:text-muted"
+          class="mt-5 inline-flex h-11 w-full items-center justify-center rounded-control bg-primary px-5 text-sm font-semibold text-on-primary transition-colors hover:bg-primary-active disabled:cursor-not-allowed disabled:bg-primary-disabled disabled:text-body"
           type="submit"
           disabled={!canUpload}
         >
@@ -380,7 +382,7 @@
           <div class="flex items-start justify-between gap-4">
             <div class="min-w-0">
               <p
-                class="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted"
+                class="text-[10px] font-semibold uppercase tracking-[0.16em] text-body"
               >
                 Job ID
               </p>
